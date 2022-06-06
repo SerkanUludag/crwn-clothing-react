@@ -4,8 +4,6 @@ import Navigation from "./routes/navigation/navigation.component";
 import Home from "./routes/home/home.component";
 import Authentication from "./routes/authentication/authentication.component";
 
-import "@fontsource/open-sans-condensed";
-
 const Shop = () => {
   return (
     <h1>Shop component</h1>
