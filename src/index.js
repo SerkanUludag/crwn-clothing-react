@@ -4,24 +4,22 @@ import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
-import { UserProvider } from "./contexts/user.context";
-import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 import "@fontsource/open-sans-condensed";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoriesProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CategoriesProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
