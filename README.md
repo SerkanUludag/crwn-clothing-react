@@ -1,1 +1,1 @@
-# URL: crwn-clothing-reactjs.herokuapp.com
+# URL: http://crwn-clothing-reactjs.herokuapp.com/
